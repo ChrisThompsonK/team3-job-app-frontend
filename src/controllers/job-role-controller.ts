@@ -308,10 +308,11 @@ export class JobRoleController {
         return;
       }
 
-      // Render the application form
+      // Render the application form with pre-filled user email
       res.render('job-roles/apply', {
         title: `Apply for ${jobRoleDetails.name}`,
         jobRole: jobRoleDetails,
+        userEmail: req.user?.email,
       });
     } catch (error) {
       console.error('Error fetching job role for application:', error);

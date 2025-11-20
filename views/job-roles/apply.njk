@@ -107,7 +107,7 @@
               id="email"
               name="email" 
               placeholder="john.doe@example.com" 
-              value="{{ formData.email if formData else '' }}"
+              value="{{ formData.email if formData else (userEmail or '') }}"
               autocomplete="off"
               class="input input-bordered input-lg w-full focus:input-primary transition-colors duration-200" 
               required
